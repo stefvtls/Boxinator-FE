@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import keycloak from 'src/keycloak';
 
 @Component({
   selector: 'app-profile',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.page.css']
 })
 export class ProfilePage {
+
+
 
 }
