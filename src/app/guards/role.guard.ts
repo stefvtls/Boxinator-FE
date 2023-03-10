@@ -22,7 +22,7 @@ export class RoleGuard implements CanActivate {
         return true;
       } else {
         this.router.navigateByUrl('/profile');
-        window.alert("sorry, but you do not have permissions to access this page. If you think you should be able to view this page contact our support team.")
+        window.alert("sorry, but you do not have permissions to access this page. If you think you should be able to view this page contact our support team.");
         return false;
       }
   }

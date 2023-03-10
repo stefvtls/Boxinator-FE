@@ -29,8 +29,7 @@ const routes: Routes = [
         canActivate: [RoleGuard],
         data: {
             realmRole: "ADMIN"
-          }
-      
+          } 
     }
 ] //routes for the application
 
