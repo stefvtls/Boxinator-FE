@@ -10,6 +10,7 @@ import { LoginPage } from './pages/login/login.page';
 import { ProfilePage } from './pages/profile/profile.page';
 import { AdminPage } from './pages/admin/admin.page';
 import { NavbarComponent } from './navigation/navbar/navbar.component';
+import { PlaceOrderPage } from './pages/place-order/place-order.page';
 
 
 
@@ -20,7 +21,8 @@ import { NavbarComponent } from './navigation/navbar/navbar.component';
     LoginPage,
     ProfilePage,
     AdminPage,
-    NavbarComponent
+    NavbarComponent,
+    PlaceOrderPage
   ],
   imports: [
     BrowserModule,
