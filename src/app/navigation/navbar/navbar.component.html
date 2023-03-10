@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark bg-danger sticky-top navbar-expand-lg">
+    <!-- <a class="navbar-brand" href="#"> -->
+        <!-- <img src="" width="30" height="30" alt=""> -->
+      <!-- </a> -->
+    <a class="navbar-brand mb-0 h1 nav-item nav-link" href="/">Boxinator</a>
+    <div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+                <!-- place ALWAYS accessible links here -->
+                <a class="nav-item nav-link" href="/place-order">Order a mystery box </a>
+
+                <!-- place NOT AUTHENTICATED USER accessible links here -->
+                <ng-container *ngIf="authenticatedUser !== undefined && authenticatedUser === false">
+                    <a class="nav-item nav-link" href="/login">Login </a>
+                </ng-container>
+
+                <!-- place ADMIN accessible links here -->
+                <ng-container *ngIf="adminRole !== undefined && adminRole === true"> 
+                    <a class="nav-item nav-link" href="/admin/dashboard">Admin</a>
+                </ng-container>
+                
+
+                <!-- place AUTHENTICATED USER accessible links here -->
+                <ng-container *ngIf="authenticatedUser !== undefined && authenticatedUser === true">
+                    <a class="nav-item nav-link" href="/profile">Profile</a>
+                    <a class="nav-item nav-link" (click)="handleLogOut()">Log Out</a>
+                </ng-container> 
+
+            </div>
+        </div>
+    </div>
+</nav>
