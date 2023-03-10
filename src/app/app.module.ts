@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { LoginPage } from './pages/login/login.page';
 import { ProfilePage } from './pages/profile/profile.page';
 import { AdminPage } from './pages/admin/admin.page';
+import { NavbarComponent } from './navigation/navbar/navbar.component';
 
 
 
@@ -18,7 +19,8 @@ import { AdminPage } from './pages/admin/admin.page';
     AppComponent,
     LoginPage,
     ProfilePage,
-    AdminPage
+    AdminPage,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
