@@ -46,9 +46,10 @@ import Keycloak, {
     jti?: string;
     name?: string;
     preferred_username?: string;
-    roles?: string[];
+    // roles?: string[];
     scope?: string;
     sid?: string;
     typ?: string;
+    realm_access?: any; 
   }
   

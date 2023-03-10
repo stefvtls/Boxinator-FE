@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AuthGuard } from "./guards/auth.guard";
+import { RoleGuard } from "./guards/role.guard";
+import { AdminPage } from "./pages/admin/admin.page";
 import { HomePage } from "./pages/home/home.page";
 import { LoginPage } from "./pages/login/login.page";
 import { ProfilePage } from "./pages/profile/profile.page";
@@ -20,7 +22,14 @@ const routes: Routes = [
         path: "profile",
         component: ProfilePage,
         canActivate: [AuthGuard]
-        
+    },
+    {
+        path: "admin/dashboard",
+        component: AdminPage,
+        canActivate: [RoleGuard],
+        data: {
+            realmRole: "ADMIN"
+          } 
     }
 ] //routes for the application
 
