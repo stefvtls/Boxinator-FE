@@ -10,13 +10,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
+                <!-- TO REMOVE LATER, for debugging only -->
+                <button type="button" class="btn btn-outline-dark" (click)="handleDisplayToken()">CONSOLE LOG TOKEN DATA (DEBUG ONLY) </button>
 
                 <!-- place ALWAYS accessible links here -->
                 <a class="nav-item nav-link" href="/place-order">Order a mystery box </a>
+                
 
                 <!-- place NOT AUTHENTICATED USER accessible links here -->
                 <ng-container *ngIf="authenticatedUser !== undefined && authenticatedUser === false">
-                    <a class="nav-item nav-link" href="/login">Login </a>
+                    <a class="nav-item nav-link" (click)="handleLogIn()">Login </a>
+                
                 </ng-container>
 
                 <!-- place ADMIN accessible links here -->
@@ -25,7 +29,7 @@
                 </ng-container>
                 
 
-                <!-- place AUTHENTICATED USER accessible links here -->
+                <!-- place AUTHENTICATED USER accessible links here when LOGGED IN-->
                 <ng-container *ngIf="authenticatedUser !== undefined && authenticatedUser === true">
                     <a class="nav-item nav-link" href="/profile">Profile</a>
                     <a class="nav-item nav-link" (click)="handleLogOut()">Log Out</a>

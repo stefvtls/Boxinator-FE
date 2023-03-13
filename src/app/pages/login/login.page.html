@@ -1,4 +1,8 @@
 <p>login works!</p>
-<button (click)="handleLogin()" type="button" class="btn btn-outline-danger">Login in with KC </button>
-<button type="button" class="btn btn-outline-danger" (click)="handleLogout()">Log out</button>
-<button type="button" class="btn btn-outline-danger" (click)="handleDisplayToken()">Console.log token</button>
+<!-- this page is unnecessary, because LOGIN PAGE IS PROVIDED BY KEYCLOAK, i used it to test some stuff from fe and be connection-->
+
+
+<button type="button" (click)="requestPublic()">Test public route </button><br>
+<button type="button" (click)="requestAuthenticated()">Test authenticated route </button><br>
+<button type="button" (click)="requestAuthorized()">Test authorized route </button><br>
+

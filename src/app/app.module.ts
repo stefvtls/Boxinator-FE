@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenRefreshHttpInterceptor } from './interceptors/token-refresh-http.interceptor';
 import { TokenAuthHttpInterceptor } from './interceptors/token-auth-http.interceptor';
 
@@ -16,7 +16,7 @@ import { PlaceOrderPage } from './pages/place-order/place-order.page';
 
 
 @NgModule({
-  declarations: [ // components visible to the app
+  declarations: [ // components visible to the app  
     AppComponent,
     LoginPage,
     ProfilePage,
@@ -26,6 +26,7 @@ import { PlaceOrderPage } from './pages/place-order/place-order.page';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [
