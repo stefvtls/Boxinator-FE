@@ -56,6 +56,10 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.development.ts"
+                },
+                {
+                  "replace": "src/assets/keycloak.json",
+                  "with": "src/assets/keycloak-development.json"
                 }
               ]
             }
