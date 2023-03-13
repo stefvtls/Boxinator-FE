@@ -59,7 +59,7 @@
                 },
                 {
                   "replace": "src/assets/keycloak.json",
-                  "with": "src/assets/keycloak-development.json"
+                  "with": "src/assets/keycloak2.json"
                 }
               ]
             }
