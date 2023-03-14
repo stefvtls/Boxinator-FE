@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import keycloak from 'src/keycloak';
 import { Router } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 import { HttpClient } from '@angular/common/http';
 
